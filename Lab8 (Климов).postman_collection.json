@@ -1,0 +1,46 @@
+{
+	"info": {
+		"_postman_id": "5877e1a9-99a3-47a4-b596-6bf7978e9e8f",
+		"name": "Lab8 (Климов)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "29630589"
+	},
+	"item": [
+		{
+			"name": "Обновить дату провоза",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"date_transport\": \"2016-10-03T19:00:00\",\r\n    \"access_key\": 123\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/orders/36/update_date_transport/"
+			},
+			"response": []
+		},
+		{
+			"name": "Определить дату провоза",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"order_id\": 36\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/calc_date_transport/"
+			},
+			"response": []
+		}
+	]
+}
